@@ -34,6 +34,7 @@ Edit → Preferences → Add-ons → Install
 You will now have two new menu items in each viewport's View menu:
 - Viewport Render Image (with Notifications)
 - Viewport Render Animation (with Notifications)
+
 When you click either of these:
 1. The watcher arms itself
 2. The render begins
@@ -43,21 +44,26 @@ Progress updates are sent on a timer
 
 Completion or cancellation sends a final “ding” message
 
-Windows
+WINDOWS
+
 Users may have to enable BurnInToast notifications to receive popup notifications. The add-on should display directions (for Windows users only) within Blender's Preferences window that details how to use PowerShell to do this. Or follow the instructions below. 
 
 To install BurnInToast, open Windows PowerShell and paste this:
-  Install-Module BurntToast -Scope CurrentUser -Force
-If PowerShell blocks this, enable local scripts with:
-  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-Then run the first command again.
-To disable local scripts again, run:
-  Set-ExecutionPolicy Restricted -Scope CurrentUser -Force
 
-macOS
+Install-Module BurntToast -Scope CurrentUser -Force
+
+If PowerShell blocks this, enable local scripts with:
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
+Then run the first command again. To disable local scripts again, run:
+
+Set-ExecutionPolicy Restricted -Scope CurrentUser -Force
+
+MACOS
 - Uses Notification Center through osascript
 - No extra setup requiredLinux is set to use notify-send.
 
-Linux
+LINUX
 - Uses notify-send
 - Requires libnotify on most distros
